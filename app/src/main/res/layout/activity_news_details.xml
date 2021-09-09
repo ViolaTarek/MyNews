@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/s_35"
+            android:layout_height="@dimen/s_35"
+            android:layout_marginLeft="@dimen/s_15"
+            android:layout_marginTop="@dimen/s_25"
+            android:layout_marginBottom="@dimen/s_5"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="10dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/news_image_details"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/s_250"
+        android:layout_margin="@dimen/s_15"
+        android:scaleType="centerCrop"
+        android:src="@drawable/download"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:riv_corner_radius="@dimen/s_15" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/s_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/news_image_details">
+
+        <TextView
+            android:id="@+id/news_title_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/s_15"
+            android:layout_marginTop="@dimen/s_5"
+            android:layout_marginRight="@dimen/s_15"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s_18sp"
+            android:textStyle="bold"
+            tools:text="Breaking News" />
+
+        <TextView
+            android:id="@+id/news_desc_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/s_15"
+            android:layout_marginTop="@dimen/s_10"
+            android:layout_marginRight="@dimen/s_15"
+            android:layout_marginBottom="@dimen/s_15"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s_16sp"
+            app:layout_constraintBottom_toBottomOf="@id/news_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/news_title"
+            tools:text="youm sabeea" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
